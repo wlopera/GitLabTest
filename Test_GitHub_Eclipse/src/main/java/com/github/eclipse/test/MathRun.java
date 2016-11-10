@@ -11,14 +11,14 @@ public class MathRun implements MathInterface {
 
 	@Override
 	public String calculeAreaElement() {
-		// TODO Auto-generated method stub
-		return null;
+		double result =  width * height;
+		return "El area del cuadrado ["+width+","+height+"] es: " + result ;
 	}
 
 	@Override
 	public String getInformationElement() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "Rectangulo de ancho: " + width + " , alto: " + height;
 	}
 
 	public double getWidth() {
@@ -36,6 +36,17 @@ public class MathRun implements MathInterface {
 	public static void main(String[] args){
 		MathRun mathRun = new MathRun(1500.0, 2500.0);
 		System.out.println("Se creo el objeto MathRun con 1500 y 25000 de ancho y alto");
+		System.out.println(mathRun.calculeAreaElement());
+		System.out.println(mathRun.getInformationElement());		
+	}
+
+	public void setHeight(double height) {
+		this.height = height;
+	}
+
+	@Override
+	public String toString() {
+		return "MathRun [width=" + width + ", height=" + height + "]";
 	}
 	
 }
