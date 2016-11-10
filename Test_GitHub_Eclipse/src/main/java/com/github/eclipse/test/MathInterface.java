@@ -4,3 +4,4 @@ public interface MathInterface {
 	public String calculeAreaElement();
 	public String getInformationElement();
 }
+  
