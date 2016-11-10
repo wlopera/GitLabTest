@@ -8,7 +8,7 @@ public class MathRun implements MathInterface {
 		this.width = width;
 		this.height = height;
 	}
-	
+
 	@Override
 	public String calculeAreaElement() {
 		double result =  width * height;
@@ -31,6 +31,13 @@ public class MathRun implements MathInterface {
 
 	public double getHeight() {
 		return height;
+	}
+	
+	public static void main(String[] args){
+		MathRun mathRun = new MathRun(1500.0, 2500.0);
+		System.out.println("Se creo el objeto MathRun con 1500 y 25000 de ancho y alto");
+		System.out.println(mathRun.calculeAreaElement());
+		System.out.println(mathRun.getInformationElement());		
 	}
 
 	public void setHeight(double height) {
